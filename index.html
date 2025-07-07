@@ -1,18 +1,289 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Allina</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton:wght@400&display=swap" rel="stylesheet">
-    <script src="https://cdn.gpteng.co/gptengineer.js" defer></script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allina - Site Under Maintenance</title>
+    <link rel="icon" type="image/x-icon" href="allina-favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="allina-favicon.ico">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Myriad Pro', sans-serif;
+            background: #06153A;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow-x: hidden;
+        }
+
+        .maintenance-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            text-align: center;
+            padding: 20px;
+            padding-top: 3vh;
+            min-height: 100vh;
+        }
+
+        .logo-container {
+            position: relative;
+            width: fit-content;
+            height: fit-content;
+            margin-bottom: 40px;
+            display: inline-block;
+            padding: 0;
+            margin: 0 auto 40px auto;
+        }
+
+        .logo {
+            width: 65vw;
+            max-width: 800px;
+            height: auto;
+            object-fit: contain;
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+
+        .maintenance-text {
+            position: relative;
+            z-index: 10;
+        }
+
+        .main-title {
+            font-size: clamp(28px, 4vw, 48px);
+            font-weight: 600;
+            color: #DDB9A2;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease-out 0.5s both;
+        }
+
+        .subtitle {
+            font-size: clamp(18px, 2.5vw, 24px);
+            color: #ffffff;
+            font-weight: 400;
+            letter-spacing: 0.1em;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease-out 0.7s both;
+        }
+
+        .description {
+            font-size: clamp(14px, 1.5vw, 18px);
+            color: #cccccc;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            animation: fadeInUp 1s ease-out 0.9s both;
+        }
+
+        .loading-dots {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            margin-top: 20px;
+            animation: fadeInUp 1s ease-out 1.1s both;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #DDB9A2;
+            animation: bounce 1.4s infinite ease-in-out;
+        }
+
+        .dot:nth-child(1) { animation-delay: -0.32s; }
+        .dot:nth-child(2) { animation-delay: -0.16s; }
+        .dot:nth-child(3) { animation-delay: 0s; }
+
+
+
+        .background-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 50%, rgba(221, 185, 162, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #DDB9A2;
+            border-radius: 50%;
+            opacity: 0.3;
+            animation: float-particle 10s infinite linear;
+        }
+
+
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 80%, 100% { transform: scale(0); }
+            40% { transform: scale(1); }
+        }
+
+        @keyframes float-particle {
+            from {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.3;
+            }
+            90% {
+                opacity: 0.3;
+            }
+            to {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .logo-container {
+                margin: 0 auto 30px auto;
+            }
+            
+            .logo {
+                width: 60vw;
+                max-width: 600px;
+            }
+            
+            .maintenance-container {
+                padding: 15px;
+                padding-top: 2vh;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo-container {
+                margin: 0 auto 25px auto;
+            }
+            
+            .logo {
+                width: 70vw;
+                max-width: 500px;
+            }
+            
+            .maintenance-container {
+                padding-top: 1vh;
+            }
+            
+            .main-title {
+                letter-spacing: 0.12em;
+            }
+            
+            .subtitle {
+                letter-spacing: 0.08em;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .logo {
+                width: 65vw;
+                max-width: 400px;
+            }
+            
+            .maintenance-container {
+                padding-top: 0.5vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-overlay"></div>
+    
+    <div class="particles" id="particles"></div>
+    
+    <div class="maintenance-container">
+        <div class="logo-container">
+            <img src="layer-MC0-cropped.svg" alt="Allina Logo" class="logo">
+        </div>
+        
+        <div class="maintenance-text">
+            <h1 class="main-title">Site Under Maintenance</h1>
+            <p class="subtitle">We're Working Hard to Improve Your Experience</p>
+            <p class="description">
+                Our team is currently updating and enhancing the website to serve you better. 
+                We'll be back online soon with exciting new features and improvements.
+            </p>
+            
+        </div>
+        
+
+    </div>
+
+    <script>
+        // Create floating particles
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 15;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 10 + 's';
+                particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Initialize particles when page loads
+        window.addEventListener('load', createParticles);
+
+        // Add subtle mouse movement effect
+        document.addEventListener('mousemove', (e) => {
+            const mouseX = e.clientX / window.innerWidth;
+            const mouseY = e.clientY / window.innerHeight;
+            
+            const overlay = document.querySelector('.background-overlay');
+            const translateX = (mouseX - 0.5) * 20;
+            const translateY = (mouseY - 0.5) * 20;
+            
+            overlay.style.transform = `translate(${translateX}px, ${translateY}px)`;
+        });
+    </script>
+</body>
+</html> 
