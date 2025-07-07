@@ -1,45 +1,67 @@
-# Maintenance Page
+# React + Vite Project
 
-This folder contains a standalone maintenance page for the Allina website.
+## Project info
 
-## Features
+A modern web application built with React and Vite.
 
-- **Minimal and clean**: Only essential files included
-- **Responsive design**: Works on all screen sizes
-- **Animations**: Includes floating particles and fade-in effects
-- **Theme consistency**: Matches the main website's design language
-- **Optimized layout**: Logo positioned in upper viewport with sticky footer
+## How can I edit this code?
 
-## Files
+There are several ways of editing your application.
 
-- `index.html` - Main maintenance page
-- `layer-MC0-cropped.svg` - Main Allina logo (SVG format, cropped with ALLINA text)
-- `allina-favicon.ico` - Custom favicon created from the logo
-- `README.md` - Documentation and usage instructions
+**Use your preferred IDE**
 
-## Usage
+The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
-1. **To deploy**: Simply upload the entire `maintenance` folder to your web server
-2. **To test locally**: Open `index.html` in a web browser
-3. **To customize**: Edit the text content in `index.html` as needed
+Follow these steps:
 
-## Features Included
+```sh
+# Step 1: Clone the repository using the project's Git URL.
+git clone <YOUR_GIT_URL>
 
-- **Optimized logo positioning**: Custom SVG logo in upper viewport with viewport-based sizing
-- **Perfect container fit**: Container size matches exactly with logo dimensions
-- **Particle effects**: Animated particles float across the screen
-- **Fade-in animations**: Text elements fade in sequentially
-- **Loading dots**: Animated dots indicate ongoing work
-- **Mouse interaction**: Subtle parallax effect follows mouse movement
-- **Responsive design**: All elements scale appropriately on all devices
+# Step 2: Navigate to the project directory.
+cd <YOUR_PROJECT_NAME>
 
-## Customization
+# Step 3: Install the necessary dependencies.
+npm i
 
-You can easily customize:
-- Main title and subtitle text
-- Description text
-- Contact information at the bottom
-- Colors (currently using theme color `#DDB9A2`)
-- Animation timings and effects
+# Step 4: Start the development server with auto-reloading and an instant preview.
+npm run dev
+```
 
-The page is designed to be minimal yet engaging, following the same aesthetic as your main website. 
+**Edit a file directly in GitHub**
+
+- Navigate to the desired file(s).
+- Click the "Edit" button (pencil icon) at the top right of the file view.
+- Make your changes and commit the changes.
+
+**Use GitHub Codespaces**
+
+- Navigate to the main page of your repository.
+- Click on the "Code" button (green button) near the top right.
+- Select the "Codespaces" tab.
+- Click on "New codespace" to launch a new Codespace environment.
+- Edit files directly within the Codespace and commit and push your changes once you're done.
+
+## What technologies are used for this project?
+
+This project is built with:
+
+- Vite
+- TypeScript
+- React
+- shadcn-ui
+- Tailwind CSS
+
+## How to deploy on Vercel?
+
+1. Push your code to a Git repository (GitHub, GitLab, or Bitbucket)
+2. Visit [Vercel](https://vercel.com) and sign up or log in
+3. Click "New Project"
+4. Import your Git repository
+5. Configure your project settings:
+   - Framework Preset: Vite
+   - Build Command: `npm run build`
+   - Output Directory: `dist`
+6. Click "Deploy"
+
+Vercel will automatically detect your Vite configuration and deploy your project. Each time you push changes to your repository, Vercel will automatically redeploy your site.
