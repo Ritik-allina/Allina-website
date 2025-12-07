@@ -171,7 +171,7 @@ export const Metrics: React.FC = () => {
         {/* Main Container - Increased Size */}
         <div 
           ref={mainContainerRef}
-          className="w-full bg-black rounded-[30px] p-12 sm:p-16 lg:p-20 xl:p-24 flex flex-col lg:flex-row items-start lg:items-center gap-12 lg:gap-20 xl:gap-24 min-h-[500px] lg:min-h-[600px]"
+          className="w-full bg-black rounded-[20px] sm:rounded-[30px] p-6 sm:p-8 md:p-12 lg:p-20 xl:p-24 flex flex-col lg:flex-row items-start lg:items-center gap-6 sm:gap-8 md:gap-12 lg:gap-20 xl:gap-24 min-h-[400px] sm:min-h-[500px] lg:min-h-[600px]"
         >
           
           {/* Left Side - Navigation Menu */}
@@ -209,7 +209,7 @@ export const Metrics: React.FC = () => {
           </div>
 
           {/* Right Side - Scroll Content */}
-          <div className="w-full bg-black rounded-[30px] overflow-hidden h-[500px] lg:h-[600px]">
+          <div className="w-full bg-black rounded-[30px] overflow-hidden h-[400px] sm:h-[500px] lg:h-[600px]">
             <div ref={scrollContentRef} className="h-full w-full">
               <div ref={keySectionRef} className="h-full snap-start py-6">
                 <div className="relative h-full flex flex-col justify-center">
@@ -218,14 +218,14 @@ export const Metrics: React.FC = () => {
                     <div className="absolute left-1/2 top-0 bottom-0 w-[1px] bg-white/20"></div>
                   </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 px-8 py-12 lg:py-16 relative z-10">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 md:gap-12 lg:gap-16 xl:gap-20 px-4 sm:px-6 md:px-8 py-8 sm:py-10 md:py-12 lg:py-16 relative z-10">
                     {keyFiguresData.map((metric, index) => (
                       <div key={index} className="text-center">
                         <div 
-                          className="text-white font-normal mb-4 sm:mb-6"
+                          className="text-white font-normal mb-3 sm:mb-4 md:mb-6"
                           style={{
                             fontFamily: 'Myriad Pro, Helvetica, Arial, sans-serif',
-                            fontSize: 'clamp(3.5rem, 10vw, 6rem)',
+                            fontSize: 'clamp(2rem, 5vw, 3.5rem)',
                             lineHeight: '1.1',
                             fontWeight: 300
                           }}
@@ -236,7 +236,7 @@ export const Metrics: React.FC = () => {
                           className="text-gray-400"
                           style={{
                             fontFamily: 'Myriad Pro, Helvetica, Arial, sans-serif',
-                            fontSize: 'clamp(14px, 2.5vw, 18px)',
+                            fontSize: 'clamp(12px, 2vw, 18px)',
                             fontWeight: 400,
                             letterSpacing: '0.05em'
                           }}
@@ -255,14 +255,14 @@ export const Metrics: React.FC = () => {
                     <div className="absolute left-1/2 top-0 bottom-0 w-[1px] bg-white/20"></div>
                   </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 lg:gap-20 xl:gap-24 max-w-5xl mx-auto px-8 py-12 lg:py-16 relative z-10">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 md:gap-12 lg:gap-20 xl:gap-24 max-w-5xl mx-auto px-4 sm:px-6 md:px-8 py-8 sm:py-10 md:py-12 lg:py-16 relative z-10">
                     {climateCommitmentData.map((metric, index) => (
                       <div key={index} className="text-center">
                         <div 
-                          className="text-white font-normal mb-4 sm:mb-6"
+                          className="text-white font-normal mb-3 sm:mb-4 md:mb-6"
                           style={{
                             fontFamily: 'Myriad Pro, Helvetica, Arial, sans-serif',
-                            fontSize: 'clamp(3.5rem, 10vw, 6rem)',
+                            fontSize: 'clamp(2rem, 5vw, 3.5rem)',
                             lineHeight: '1.1',
                             fontWeight: 300
                           }}
@@ -273,7 +273,7 @@ export const Metrics: React.FC = () => {
                           className="text-gray-400"
                           style={{
                             fontFamily: 'Myriad Pro, Helvetica, Arial, sans-serif',
-                            fontSize: 'clamp(14px, 2.5vw, 18px)',
+                            fontSize: 'clamp(12px, 2vw, 18px)',
                             fontWeight: 400,
                             letterSpacing: '0.05em'
                           }}

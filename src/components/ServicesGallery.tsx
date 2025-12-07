@@ -65,11 +65,11 @@ export const ServicesGallery: React.FC = () => {
         </h2>
 
         {/* Mobile Layout (≤768px) */}
-        <div className="md:hidden grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
+        <div className="md:hidden grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
           {services.map((service) => (
             <div
               key={service.id}
-              className="relative rounded-[20px] overflow-hidden aspect-[4/3] cursor-pointer group transform transition-all duration-300 hover:scale-105"
+              className="relative rounded-[15px] sm:rounded-[20px] overflow-hidden aspect-[3/2] sm:aspect-[4/3] cursor-pointer group transform transition-all duration-300 hover:scale-105"
               onMouseEnter={() => setHoveredId(service.id)}
               onMouseLeave={() => setHoveredId(null)}
             >
