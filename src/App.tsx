@@ -7,6 +7,7 @@ import { Toaster } from '@/components/ui/toaster';
 import { Toaster as Sonner } from '@/components/ui/sonner';
 import { Routes, Route } from 'react-router-dom';
 import { ScrollToTop } from './components/ScrollToTop';
+import MobilePopup from './components/MobilePopup';
 import Index from './pages/Index';
 import About from './pages/About';
 import Contact from './pages/Contact';
@@ -44,6 +45,7 @@ const App = () => {
           <ScrollToTop />
           <TooltipProvider>
             <div className="min-h-screen bg-[#E7DED7] dark:bg-black transition-colors duration-700">
+              <MobilePopup />
               <Routes>
                 <Route path="/" element={<Index />} />
                 <Route path="/about" element={<About />} />

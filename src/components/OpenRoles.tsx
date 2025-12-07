@@ -470,10 +470,16 @@ export const OpenRoles: React.FC = () => {
                     Engineering
                   </h2>
                   <p 
-                    className="text-gray-600 text-lg"
+                    className="text-gray-600 text-lg mb-2"
                     style={{ fontFamily: 'Myriad Pro, Helvetica, Arial, sans-serif' }}
                   >
                     Open positions in our Engineering team.
+                  </p>
+                  <p 
+                    className="text-[#06153A] text-sm font-semibold bg-yellow-200/50 px-3 py-1 rounded-md inline-block"
+                    style={{ fontFamily: 'Myriad Pro, Helvetica, Arial, sans-serif' }}
+                  >
+                    Currently not accepting new applications
                   </p>
                 </div>
                 
@@ -531,10 +537,16 @@ export const OpenRoles: React.FC = () => {
                     Management
                   </h2>
                   <p 
-                    className="text-gray-600 text-lg"
+                    className="text-gray-600 text-lg mb-2"
                     style={{ fontFamily: 'Myriad Pro, Helvetica, Arial, sans-serif' }}
                   >
                     Open positions in our Management team.
+                  </p>
+                  <p 
+                    className="text-[#06153A] text-sm font-semibold bg-yellow-200/50 px-3 py-1 rounded-md inline-block"
+                    style={{ fontFamily: 'Myriad Pro, Helvetica, Arial, sans-serif' }}
+                  >
+                    Currently not accepting new applications
                   </p>
                 </div>
                 
